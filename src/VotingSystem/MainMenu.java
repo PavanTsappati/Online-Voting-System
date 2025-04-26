@@ -88,7 +88,31 @@ public class MainMenu {
 
     // Admin view results functionality
     private static void viewResults() {
-        System.out.println("Here are the voting results: ");
-        // Implement the logic to show results, e.g., SELECT candidate.name, candidate.votes FROM candidate;
+       try (Connection con = DatabaseConnection.getConnection()) {
+	        String query = "SELECT name, votes FROM candidate ORDER BY votes DESC";
+	        PreparedStatement pst = con.prepareStatement(query);
+	        ResultSet rs = pst.executeQuery();
+
+	        System.out.println("----------------------------------");
+	        System.out.println("| Candidate Name | Votes Received |");
+	        System.out.println("----------------------------------");
+
+	        boolean resultsFound = false;
+	        while (rs.next()) {
+	            String name = rs.getString("name");
+	            int votes = rs.getInt("votes");
+	            System.out.printf("| %-15s | %-14d |\n", name, votes);
+	            resultsFound = true;
+	        }
+
+	        System.out.println("----------------------------------");
+
+	        if (!resultsFound) {
+	            System.out.println("No voting results found.");
+	        }
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
     }
 }
