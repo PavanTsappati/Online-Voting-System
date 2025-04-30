@@ -21,7 +21,7 @@ An interactive online voting system developed using Java, featuring secure login
 ## 📂 Project Structure
 - `src/VotingSystem` – Java source code
 - `bin/` – Compiled class files
-- `database.sql` – Sample database setup (if available)
+- `database.sql` – Sample database setup 
 
 ---
 
