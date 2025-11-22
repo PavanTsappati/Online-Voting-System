@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="Crud Page.png" width="600">
-</p>
-
 # 🗳 Online Voting System
 
 An interactive online voting system developed using Java, featuring secure login, vote casting, and admin management.
@@ -29,13 +25,13 @@ An interactive online voting system developed using Java, featuring secure login
 
 ## 📌 How It Works
 
-1. 🧑‍💻 Voter registers with unique voter ID  
-2. 🔐 Login system validates user credentials  
-3. 🗳 User casts vote (only once allowed)  
-4. 👨‍💼 Admin can:
-   - Add / remove candidates  
-   - View election results  
-   - Manage user access  
+1. 🧑‍💻 Users register using a unique voter ID  
+2. 🔐 Login authentication verifies identity  
+3. 🗳 Votes are stored securely — user can vote only once  
+4. 👨‍💼 Admin has permissions to:
+   - Add/remove candidates  
+   - View total votes  
+   - Manage elections  
 
 ---
 
