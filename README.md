@@ -37,3 +37,32 @@ An interactive online voting system developed using Java, featuring secure login
 
 ## 📂 Project Structure
 
+
+---
+
+## 📸 UI Preview
+
+Below is a preview of the system interface during testing and development:
+
+<p align="center">
+  <img src="Crud Page.png" width="550">
+</p>
+
+---
+
+## 🚀 Future Enhancements
+
+- 🔧 GUI-based desktop or web version  
+- 🔒 OTP/Gmail authentication support  
+- 📊 Real-time analytics dashboard  
+- ☁ Cloud database storage  
+
+---
+
+> 🏗 Built as a personal learning project to strengthen backend logic, authentication systems, and database integration in Java.
+
+---
+
+### ⭐ Support
+
+If you found this project helpful, please consider ⭐ starring the repository!
