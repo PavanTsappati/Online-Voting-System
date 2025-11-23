@@ -36,7 +36,7 @@ This project demonstrates core backend skills such as **REST API development, se
 ### 🔐 Login Page
 
 <p align="center">
-  <img src="Login Page.png" width="600">
+  <img src="Login Page.png" width="800">
 </p>
 
 ---
@@ -44,7 +44,7 @@ This project demonstrates core backend skills such as **REST API development, se
 ### 📝 Task Management Page
 
 <p align="center">
-  <img src="Task Page.png" width="600">
+  <img src="Task Page.png" width="800">
 </p>
 
 ---
@@ -52,7 +52,7 @@ This project demonstrates core backend skills such as **REST API development, se
 ### 📜 Audit Log Page
 
 <p align="center">
-  <img src="Audit Log Page.png" width="600">
+  <img src="Audit Log Page.png" width="800">
 </p>
 
 ---
