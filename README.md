@@ -29,19 +29,43 @@ This project demonstrates backend fundamentals such as **REST API design, valida
 
 ---
 
+## 📸 Application Preview
+
+---
+
+### 🔐 Login Page
+
+<p align="center">
+  <img src="Login Page.png" width="600">
+</p>
+
+---
+
+### 📝 Task Management Page
+
+<p align="center">
+  <img src="Task Page.png" width="600">
+</p>
+
+---
+
+### 📜 Audit Log Page
+
+<p align="center">
+  <img src="Audit Log Page.png" width="600">
+</p>
+
+---
+
 ## 🔐 Authentication (Login)
 
 Users must authenticate before using the application.
 
 > Default credentials (as per assessment):
 ```
-Username: admin
+Username: admin  
 Password: password123
 ```
-
-### 🔻 Login UI
-
-![Login](Screenshot 2025-11-23 113230.png)
 
 ---
 
@@ -54,10 +78,6 @@ After login, users can:
 - Edit existing tasks  
 - Delete tasks  
 - Search tasks by title/description  
-
-### 🔻 Task Page UI
-
-![Tasks Page](Screenshot 2025-11-23 113553.png)
 
 Backend Endpoints Example:
 
@@ -78,10 +98,6 @@ Every operation is recorded:
 - Task Update  
 - Task Deletion  
 - Task ID included for traceability  
-
-### 🔻 Audit Logs UI
-
-![Audit Logs](Screenshot 2025-11-23 113628.png)
 
 Example log entry stored in DB:
 
@@ -157,4 +173,3 @@ http://localhost:8080
 ---
 
 ### 📌 Status: Completed ✔
-
