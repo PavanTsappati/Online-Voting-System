@@ -1,31 +1,31 @@
 # 📝 Task Manager Application
 
-A simple yet functional Task Manager built using **Spring Boot**, featuring authentication, task CRUD operations, and audit logging.  
-This project demonstrates backend fundamentals such as **REST API design, validation, logging, persistence using JPA, and UI integration**.
+A functional Task Manager built using **Spring Boot**, featuring authentication, CRUD task operations, and audit trail logging.  
+This project demonstrates core backend skills such as **REST API development, service-layer architecture, logging, and database handling with Spring Data JPA.**
 
 ---
 
 ## 🚀 Features
 
-- 🔐 Login Authentication  
-- ✨ Create, Read, Update, Delete Tasks  
+- 🔐 User Login System  
+- 📝 Create, Read, Update, Delete Tasks  
 - 🔍 Search and Pagination  
-- 📜 Audit Logging for activity tracking  
-- 🗄️ Database integration using Spring Data JPA  
-- 🌍 REST API returning proper JSON responses  
+- 📜 Audit Logs for every action  
+- 🗄️ Database integration with Spring Data JPA  
+- 🌍 REST API with JSON responses  
 
 ---
 
 ## 📌 Tech Stack
 
-| Layer | Technology Used |
-|-------|----------------|
-| Backend Framework | Spring Boot |
+| Category | Technology |
+|---------|------------|
+| Framework | Spring Boot |
 | Database | MySQL / H2 |
 | ORM | Spring Data JPA |
-| Validation | Jakarta Validation |
-| Logging | Custom Audit Logging |
+| Architecture | Controller → Service → Repository |
 | UI | HTML, CSS, JavaScript |
+| Logging | Custom Audit Logging |
 
 ---
 
@@ -57,13 +57,12 @@ This project demonstrates backend fundamentals such as **REST API design, valida
 
 ---
 
-## 🔐 Authentication (Login)
+## 🔐 Authentication
 
-Users must authenticate before using the application.
+Users must log in before accessing the system.
 
-> Default credentials (as per assessment):
 ```
-Username: admin  
+Username: admin
 Password: password123
 ```
 
@@ -73,79 +72,75 @@ Password: password123
 
 After login, users can:
 
-- Create new tasks  
-- View task list with pagination  
-- Edit existing tasks  
-- Delete tasks  
-- Search tasks by title/description  
+- Add new tasks  
+- Edit or update existing tasks  
+- Delete a task  
+- View paginated task list  
+- Search tasks using keywords  
 
-Backend Endpoints Example:
+### API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | POST | `/tasks` | Create a task |
-| GET | `/tasks` | Fetch paginated tasks |
-| PUT | `/tasks/{id}` | Update task |
-| DELETE | `/tasks/{id}` | Delete task |
+| GET | `/tasks` | Get all/paginated tasks |
+| PUT | `/tasks/{id}` | Update a task |
+| DELETE | `/tasks/{id}` | Delete a task |
 
 ---
 
 ## 🧾 Audit Logging
 
-Every operation is recorded:
+Every change is recorded, including:
 
-- Task Creation  
-- Task Update  
-- Task Deletion  
-- Task ID included for traceability  
+- Task Create
+- Task Update
+- Task Delete
+- Timestamp + Task ID
 
-Example log entry stored in DB:
+Example entry:
 
 ```json
 {
-  "timestamp": "2025-11-23T10:02:41",
-  "action": "Create Task",
-  "taskId": 2,
-  "updatedContent": "{title: ...}"
+  "action": "Task Updated",
+  "taskId": 4,
+  "timestamp": "2025-11-23T15:31:02"
 }
 ```
 
 ---
 
-## 📁 Project Structure
+## 📁 Folder Structure
 
 ```
 src/main/java/com/taskmanager
- ┣ controller       → REST Controllers
- ┣ entity           → JPA Entities (Task, AuditLog)
- ┣ repository       → Spring Data JPA Interfaces
- ┣ service          → Business Logic + Audit Tracking
- ┗ security         → Authentication Logic
+ ┣ controller       → Handles API requests
+ ┣ entity           → Task & AuditLog models
+ ┣ repository       → Database CRUD interfaces
+ ┣ service          → Business logic + audit tracking
+ ┗ security         → Login handling
 ```
 
 ---
 
-## 🧪 Validation & Error Handling
+## 🧪 Error Handling
 
-The app validates inputs and returns clear JSON error messages.
-
-Example invalid input response:
+The app returns proper structured responses in case of invalid operations (ex: editing non-existing task).
 
 ```json
 {
-  "timestamp": "2025-11-23",
-  "error": "Validation Failed",
-  "details": "Task title cannot be empty"
+  "error": "Task not found",
+  "status": 404
 }
 ```
 
 ---
 
-## 🏁 How to Run
+## 🏁 How to Run Locally
 
-1. Clone repository  
-2. Configure database in `application.properties`  
-3. Run Spring Boot application  
+1. Clone the repository  
+2. Update database config in `application.properties`  
+3. Run the Spring Boot application  
 4. Open browser:
 
 ```
@@ -154,21 +149,21 @@ http://localhost:8080
 
 ---
 
-## ⭐ Why This Project Adds Value
+## ⭐ Why This Project Matters
 
-✔ Demonstrates real-world backend architecture  
-✔ Includes authentication and audit logs  
-✔ Follows clean REST design principles  
-✔ Good project for freshers to showcase Spring Boot skills  
+✔ Real-world structure (Controller → Service → Repository)  
+✔ Includes authentication + database + logging  
+✔ Good portfolio project for backend roles  
+✔ Easy to extend with JWT or frontend frameworks  
 
 ---
 
-## 🔧 Possible Future Enhancements
+## 🔧 Future Enhancements
 
 - JWT Authentication  
-- RBAC (Admin/User Roles)  
+- Role-based access control  
 - Docker Support  
-- Frontend rewrite using React/Angular  
+- React/Angular Frontend  
 
 ---
 
